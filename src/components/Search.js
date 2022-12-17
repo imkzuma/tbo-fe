@@ -20,7 +20,7 @@ export default function Search() {
     }
 
     return (
-        <Container className='lg:mt-[-10rem] sm:p-5'>
+        <Container className='sm:mt-[-5rem] lg:mt-[-10rem] sm:p-6'>
             <Row className='border-2 border-gray-300 bg-white rounded-lg py-4 shadow-md'>
                 <Col lg={6} className='sm:border-b-2 md:border-b-0 md:border-r-2 border-gray-400 pb-5'>
                     <Col lg={12} className='sm:px-1 lg:px-3'>
@@ -44,7 +44,6 @@ export default function Search() {
                                 </Tab>
                             </Tabs>
                         </div>
-
                     </Col>
                 </Col>
                 <Col lg={6} className='sm:pt-7 md:pt-0'>
@@ -55,7 +54,7 @@ export default function Search() {
                                     <p className='text-primary pb-2 border-b-2 border-sky-500'>Hasil Pengecekan</p>
                                 }>
                                     <div className={`px-3 mt-2 py-3 mb-2 rounded-md disabled ${hasilData === null ? "bg-gray-400" : hasilData ? "bg-green-300" : "bg-red-300"} `}>
-                                        <p className='text-gray-100 h-52'>
+                                        <div className='text-gray-100 h-52'>
                                             {
                                                 hasilData === null ? "Masukkan String terlebih dahulu"
                                                 : hasilData
@@ -70,7 +69,7 @@ export default function Search() {
                                                             <h5 className='text-xl text-slate-900 p-3'>Adalah: <span className='text-danger font-bold'>TIdak Valid</span></h5>
                                                         </>
                                             }
-                                        </p>
+                                        </div>
                                     </div>
                                 </Tab>
                             </Tabs>
