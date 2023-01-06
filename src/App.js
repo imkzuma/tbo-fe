@@ -1,20 +1,36 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-import Search from "./components/Search";
-import HeaderApp from "./components/Header";
 import './App.css';
-import Section from "./components/Section";
-import Kelompok from "./components/SectionKelompok";
-import Footer from "./components/Footer";
+
+import { Container } from "react-bootstrap";
+import React from "react";
+
+const Search = React.lazy(() => import("./components/Search"));
+const HeaderApp = React.lazy(() => import("./components/Header"));
+
+const Section = React.lazy(() => import("./components/Section"));
+const Kelompok = React.lazy(() => import("./components/SectionKelompok"));
+const Footer = React.lazy(() => import("./components/Footer"));
 
 export default function App() {
+
+  const LoadPage = () => {
+    return (
+      <Container fluid className='h-screen w-full bg-white overflow-hidden'>
+        <div className='d-flex justify-content-center items-center'>
+          <div className='animate-spin rounded-full h-24 w-24 border-t-2 border-b-2 border-primary'></div>
+        </div>
+      </Container>
+    )
+  }
+
   return (
-    <div>
+    <React.Suspense fallback={LoadPage()}>
       <HeaderApp />
       <Search />
       <Section />
       <Kelompok />
       <Footer />
-    </div>
+    </React.Suspense>
   );
 }
 

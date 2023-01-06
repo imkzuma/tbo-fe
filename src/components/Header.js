@@ -3,7 +3,7 @@ import {Container, Button, Col} from 'react-bootstrap';
 export default function headerApp(){
     return(
         <Container fluid className = 'h-[60vh] d-flex justify-content-center align-items-center text-center bg-primary md:rounded-b-full'>
-            <Container className = 'pb-24 pt-14'>
+            <Container className = 'pb-32 pt-14'>
                 <div>
                     <h1 className = 'text-5xl text-white font-bold'>Project Akhir TBO</h1>
                     <Col lg = {6} className = 'm-auto'>
