@@ -15,9 +15,10 @@ export default function App() {
 
   const LoadPage = () => {
     return (
-      <Container fluid className='h-screen w-full bg-white overflow-hidden'>
-        <div className='d-flex justify-content-center items-center'>
+      <Container fluid className='h-screen w-full bg-white overflow-hidden d-flex justify-content-center items-center'>
+        <div>
           <div className='animate-spin rounded-full h-24 w-24 border-t-2 border-b-2 border-primary'></div>
+          <p className="text-center py-4 text-xl text-primary animate-pulse">Loading</p>
         </div>
       </Container>
     )
